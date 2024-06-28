@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Search Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #search-input {
+            padding: 10px;
+            width: 300px;
+        }
+        #search-results {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Search Engine</h1>
+
+    <input type="text" id="search-input" placeholder="Search...">
+    <button onclick="search()">Search</button>
+
+    <div id="search-results"></div>
+
+    <script>
+        function search() {
+            // In a real scenario, you'd send a request to the backend for search results
+            // and update the #search-results div with the actual results.
+
+            // For simplicity, let's just show a sample result here.
+            const query = document.getElementById('search-input').value;
+            const resultsDiv = document.getElementById('search-results');
+            resultsDiv.innerHTML = `<p>Showing results for: <strong>${query}</strong></p>
+                                    <p><a href="#">Sample Result 1</a></p>
+                                    <p><a href="#">Sample Result 2</a></p>
+                                    <p><a href="#">Sample Result 3</a></p>`;
+        }
+    </script>
+</body>
+</html>
